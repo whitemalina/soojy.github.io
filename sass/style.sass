@@ -30,7 +30,7 @@ body
 
     .circle 
         height: 250px
-        width: 350px
+        width: 353px
         border-radius: 10px
         transition: all 1s
         overflow: hidden
@@ -59,7 +59,12 @@ body
         h1 
             margin-top: 15px
 
-
+@media screen and (max-width: 950px)
+    .top
+        .circle
+            width: 60%
+            height: 55%
+        
     
 @keyframes fadeIn 
     0%
@@ -81,7 +86,8 @@ body
         transform: translate(3%, 3%)
 @keyframes rot
   from
-    transform: rotate(0deg) translate(-50px) rotate(0deg)
+    transform: rotate(0deg) translate(-25px) rotate(0deg)
 
   to
-    transform: rotate(360deg) translate(-50px) rotate(-360deg)
+    transform: rotate(360deg) translate(-25px) rotate(-360deg)
+
