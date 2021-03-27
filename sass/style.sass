@@ -9,7 +9,11 @@ body
     align-items: center
     background: linear-gradient(to top, #8E2DE2 0%, #4A00E0 100%)
 .fadeIn 
-    animation: .3s  fadeIn ease-in
+    animation: .5s  fadeIn ease-in
+.slide
+    animation: 2s  slide infinite
+.rot
+    animation: 2s  rot linear infinite
 .wrapp
     background: rgb(255, 255, 255);
     border-radius: 10px
@@ -18,28 +22,40 @@ body
     height: 80vh
     width: 80vw
     text-align: center
-    opacity: .5
+    opacity: .9
     transition: all .5s
-
+    overflow: hidden
     &:hover
-        opacity: .9
+        opacity: 1
+
     .circle 
-        height: 150px
-        width: 150px
-        border-radius: 100%
-        
+        height: 250px
+        width: 350px
+        border-radius: 10px
+        transition: all 1s
         overflow: hidden
-        margin: auto
         img
             height: 100%
             object-fit: cover
             object-position: center
             display: block
+        &:hover
+            height: 100%
+            width: 100%
+            border-radius: 10px
+            margin-top: 0px
+           
+                
     .top    
         // background:url(../img/bg.jpg)
-        padding: 90px 
+        // padding: 90px 
         color: black
-        font-family: Montserrat 
+        font-family: Montserrat
+        height: 100% 
+
+        display: flex
+        justify-content: center
+        align-items: center
         h1 
             margin-top: 15px
 
@@ -52,3 +68,20 @@ body
         width: 10vw
     100%
         opacity: .5 
+@keyframes slide
+    0%
+        transform: translate(3%, 3%)
+    25%
+        transform: translate(-3%, 3%)
+    50%
+        transform: translate(-3%, -3%)
+    75%
+        transform: translate(3%, -3%)
+    100%
+        transform: translate(3%, 3%)
+@keyframes rot
+  from
+    transform: rotate(0deg) translate(-50px) rotate(0deg)
+
+  to
+    transform: rotate(360deg) translate(-50px) rotate(-360deg)
